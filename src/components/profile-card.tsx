@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import * as ProfileImage from '@/assets/berker.jpg';
+import ProfileImage from '@/assets/berker.jpg';
 
 export const ProfileCard = () => {
   return (
@@ -13,6 +13,7 @@ export const ProfileCard = () => {
                 width={50}
                 height={50}
                 alt="picture of myself"
+                priority={true}
               />
             </div>
           </div>
