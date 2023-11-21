@@ -8,6 +8,13 @@ import {
   faSpotify,
 } from '@fortawesome/free-brands-svg-icons';
 
+import {
+  faHouse,
+  faHand,
+  faPencil,
+  faMusic,
+} from '@fortawesome/free-solid-svg-icons';
+
 export const Links: Array<LinkType> = [
   {
     href: 'https://twitter.com/berkerkls',
@@ -38,5 +45,28 @@ export const Links: Array<LinkType> = [
     href: 'https://open.spotify.com/user/11125431324?si=e0d5cdbc4d004919&nd=1&dlsi=c2b35fd0f4564917',
     label: 'Spotify',
     icon: faSpotify,
+  },
+];
+
+export const Navigations: Array<LinkType> = [
+  {
+    href: '/home',
+    label: 'Home',
+    icon: faHouse,
+  },
+  {
+    href: '/about',
+    label: 'About',
+    icon: faHand,
+  },
+  {
+    href: '/writings',
+    label: 'Writings',
+    icon: faPencil,
+  },
+  {
+    href: '/musictools',
+    label: 'Tools',
+    icon: faMusic,
   },
 ];
