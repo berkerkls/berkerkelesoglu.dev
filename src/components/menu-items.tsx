@@ -8,7 +8,7 @@ export const MenuItems = () => {
   return (
     <div className="card w-96 bg-slate-50 shadow-xl">
       <div className="card-body">
-        <ul className="menu w-56 rounded-box">
+        <ul className="menu rounded-box">
           {Links &&
             Links.map((item: LinkType) => (
               <MenuItem href={item.href} icon={item.icon} label={item.label} />
