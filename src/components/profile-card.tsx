@@ -3,7 +3,7 @@ import ProfileImage from '@/assets/berker.jpg';
 
 export const ProfileCard = () => {
   return (
-    <div className="card w-96 bg-slate-50 shadow-xl">
+    <div className="card w-96 transition-colors dark:bg-slate-900 shadow-xl">
       <div className="card-body">
         <div className="flex justify-between items-center w-64">
           <div className="avatar">
@@ -18,8 +18,8 @@ export const ProfileCard = () => {
             </div>
           </div>
           <div className="flex flex-col">
-            <span className="card-title text-black">Berker Keleşoğlu</span>
-            <span className="card-text text-black text-left mt-2 text-sm">
+            <span className="card-title">Berker Keleşoğlu</span>
+            <span className="card-text text-left mt-2 text-sm">
               Software Developer
             </span>
           </div>
