@@ -3,7 +3,7 @@ import ProfileImage from '@/assets/berker.jpg';
 
 export const ProfileCard = () => {
   return (
-    <div className="card w-96 bg-slate-50 shadow-xl h-32">
+    <div className="card w-96 bg-slate-50 shadow-xl">
       <div className="card-body">
         <div className="flex justify-between items-center w-64">
           <div className="avatar">

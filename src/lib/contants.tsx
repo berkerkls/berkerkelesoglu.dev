@@ -50,7 +50,7 @@ export const Links: Array<LinkType> = [
 
 export const Navigations: Array<LinkType> = [
   {
-    href: '/home',
+    href: '/',
     label: 'Home',
     icon: faHouse,
   },
