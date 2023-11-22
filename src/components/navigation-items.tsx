@@ -11,7 +11,12 @@ export const NavigationItems = () => {
         <ul className="menu rounded-box">
           {Navigations &&
             Navigations.map((item: LinkType) => (
-              <MenuItem href={item.href} icon={item.icon} label={item.label} />
+              <MenuItem
+                href={item.href}
+                icon={item.icon}
+                label={item.label}
+                key={item.href}
+              />
             ))}
         </ul>
       </div>

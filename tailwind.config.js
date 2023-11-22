@@ -6,7 +6,17 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      xs: '390px',
+      sm: '435px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
     extend: {},
+  },
+  daisyui: {
+    themes: ['dim', 'lofi'],
   },
   plugins: [require('daisyui')],
 };

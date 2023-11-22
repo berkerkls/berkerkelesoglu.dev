@@ -10,3 +10,7 @@ export interface MenuItemType {
   label: string,
   icon: IconProp
 }
+
+export interface Theme {
+  theme: string
+}
