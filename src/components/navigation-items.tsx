@@ -1,7 +1,7 @@
 'use-client';
 
 import { MenuItem } from './menu-item';
-import { Navigations } from '@/lib/contants';
+import { Navigations } from '@/data/constants';
 import { LinkType } from '@/models/models';
 
 export const NavigationItems = () => {

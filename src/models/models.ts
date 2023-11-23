@@ -14,3 +14,12 @@ export interface MenuItemType {
 export interface Theme {
   theme: string
 }
+
+export interface JourneyItemType {
+  title: string,
+  company: string | null,
+  university: string | null,
+  startDate: string,
+  endDate: string | null,
+  description: string
+}

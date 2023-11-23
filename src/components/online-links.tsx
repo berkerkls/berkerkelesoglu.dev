@@ -1,7 +1,7 @@
 'use-client';
 
 import { MenuItem } from './menu-item';
-import { Links } from '@/lib/contants';
+import { Links } from '@/data/constants';
 import { LinkType } from '@/models/models';
 
 export const OnlineLinks = () => {

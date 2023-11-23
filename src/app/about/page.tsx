@@ -1,3 +1,3 @@
 export default function About() {
-  return <h2 className="text-center text-black">About Page</h2>;
+  return <h2 className="text-center">About Page</h2>;
 }

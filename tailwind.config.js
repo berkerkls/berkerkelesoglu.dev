@@ -19,5 +19,5 @@ module.exports = {
   daisyui: {
     themes: false,
   },
-  darkMode: 'class',
+  darkMode: 'data-theme',
 };

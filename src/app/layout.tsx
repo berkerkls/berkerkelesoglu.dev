@@ -1,7 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { MenuItems } from '@/components/menu-items';
-import { ThemeButton } from '@/components/theme-switcher';
+import { ThemeButton } from '@/components/theme-button';
 import Providers from './provider';
 export const metadata: Metadata = {
   title: 'Berker Kelesoglu',
@@ -14,18 +14,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning data-theme="light">
+    <html lang="en" data-theme="light" suppressHydrationWarning>
       <body>
         <Providers>
           <ThemeButton />
-          <div className="flex min-h-screen items-center justify-between ">
-            <div className="lg:flex md:hidden sm:hidden">
-              <div className="flex flex-col gap-y-12 items-left w-1/4">
+          <div className="flex justify-between">
+            <div className="lg:flex md:hidden sm:hidden min-h-screen">
+              <div className="w-1/4 relative">
                 <MenuItems />
               </div>
             </div>
-            <div className="flex justify-center items-center w-3/4">
-              <div>{children}</div>
+            <div className="flex justify-center items-center">
+              <div className="w-3/4 min-h-screen p-10">{children}</div>
             </div>
           </div>
         </Providers>
