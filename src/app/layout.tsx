@@ -1,4 +1,7 @@
 import './globals.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+config.autoAddCss = false;
 import type { Metadata } from 'next';
 import { MenuItems } from '@/components/menu-items';
 import { ThemeButton } from '@/components/theme-button';
@@ -14,18 +17,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="light" suppressHydrationWarning>
-      <body>
+    <html lang="en" className="transition-colors" suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <Providers>
           <ThemeButton />
-          <div className="flex justify-between">
+          <div className="flex">
             <div className="lg:flex md:hidden sm:hidden min-h-screen">
-              <div className="w-1/4 relative">
+              <div className="w-1/4">
                 <MenuItems />
               </div>
             </div>
-            <div className="flex justify-center items-center">
-              <div className="w-3/4 min-h-screen p-10">{children}</div>
+            <div className="flex justify-center items-center w-3/4 min-h-screen">
+              <div className="p-10">{children}</div>
             </div>
           </div>
         </Providers>

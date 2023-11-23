@@ -6,7 +6,7 @@ import { LinkType } from '@/models/models';
 
 export const NavigationItems = () => {
   return (
-    <div className="card w-96 transition-colors dark:bg-slate-900 shadow-xl">
+    <div className="card w-96 transition-colors shadow-xl">
       <div className="card-body">
         <ul className="menu rounded-box">
           {Navigations &&
