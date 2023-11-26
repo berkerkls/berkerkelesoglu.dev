@@ -5,10 +5,10 @@
 
 @layer components {
   .wrapper {
-    @apply z-[1] w-full px-6 pb-8 pt-8 lg:px-8 lg:pb-16 lg:pt-24;
+    @apply z-[1] w-full px-6 pb-8 pt-8 lg:px-10 lg:pb-16 lg:pt-24;
   }
 
   .container {
-    @apply mx-auto w-full lg:mb-0 lg:max-w-3xl;
+    @apply w-full lg:mb-0 lg:max-w-3xl;
   }
 }
