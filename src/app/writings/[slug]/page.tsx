@@ -1,7 +1,7 @@
 import { createClient } from 'contentful';
 export const client = createClient({
-  space: '9p9kpa55hqpt',
-  accessToken: 'GUok4IDfbyiYLvZBtag2A6MEojDPLu5NIwXrPcmAk7s',
+  space: `${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}`,
+  accessToken: `${process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN}`,
 });
 export const getInitialPaths = async () => {
   const res = await client.getEntries({ content_type: 'writing' });

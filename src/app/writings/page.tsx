@@ -3,6 +3,7 @@ import { getInitialProps } from '@/data/contentful';
 import { WritingRow } from '@/components/writing-row';
 import { MotionWrapper } from '@/components/motion-wrapper';
 import { motion } from 'framer-motion';
+import { client } from './[slug]/page';
 interface writingType {
   title: string;
   slug: string;
@@ -15,6 +16,7 @@ const fetchWritings = async () => {
   const data = await getInitialProps();
   return data.reverse();
 };
+
 export default async function Page() {
   const writings = await fetchWritings();
 
