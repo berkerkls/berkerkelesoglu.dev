@@ -1,7 +1,8 @@
+'use client';
 import { getInitialProps } from '@/data/contentful';
-import { WritingCard } from '@/components/writing-row';
+import { WritingRow } from '@/components/writing-row';
 import { MotionWrapper } from '@/components/motion-wrapper';
-
+import { motion } from 'framer-motion';
 interface writingType {
   title: string;
   slug: string;
@@ -18,7 +19,10 @@ export default async function Page() {
   const writings = await fetchWritings();
 
   return (
-    <main className="flex items-center transition-colors">
+    <main
+      className="flex items-center transition-colors"
+      suppressHydrationWarning
+    >
       <MotionWrapper>
         <div className="container">
           <div className="flex flex-col justify-between">
@@ -27,9 +31,11 @@ export default async function Page() {
               Here is my writings that I published on Medium. Not much software
               related articles now but will be more in months for sure.🛠️
             </p>
-            <div className="flex flex-col w-full">
+            <div className="flex flex-col w-full" suppressHydrationWarning>
               {writings.map((writing: any) => (
-                <WritingCard key={writing.sys.id} writing={writing} />
+                <motion.div whileHover={{ scale: 1.05 }} key={writing.sys.id}>
+                  <WritingRow writing={writing} />
+                </motion.div>
               ))}
             </div>
           </div>
