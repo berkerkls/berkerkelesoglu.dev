@@ -17,21 +17,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="transition-colors" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="transition-colors">
       <body suppressHydrationWarning>
         <Providers>
           <ThemeButton />
-          <div className="flex">
-            <div className="lg:flex md:hidden sm:hidden min-h-screen">
-              <div className="w-1/4">
-                <MenuItems />
-              </div>
-            </div>
-            <div className="flex justify-center items-center w-3/4 min-h-screen">
-              <div className="p-10">{children}</div>
+        </Providers>
+
+        <div className="flex transition-colors">
+          <div className="lg:flex md:hidden sm:hidden min-h-screen">
+            <div className="w-1/4">
+              <MenuItems />
             </div>
           </div>
-        </Providers>
+          <div className="flex justify-center w-3/4 min-h-screen">
+            <div className="p-10">{children}</div>
+          </div>
+        </div>
       </body>
     </html>
   );

@@ -1,38 +1,53 @@
 'use client';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 export const ThemeButton = () => {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState<boolean>(false);
   useEffect(() => {
     setMounted(true);
-  }, []);
+  }, [resolvedTheme]);
+
+  const cn = (...args: Array<string>) => {
+    return twMerge(...args);
+  };
 
   // if (!mounted) {
   //   return null;
   // }
 
   return (
-    <button
-      aria-label="Toggle Dark Mode"
-      type="button"
-      className="flex items-center justify-center rounded-lg p-6 transition-colors float-right hover:bg-transparent"
-      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-    >
-      {resolvedTheme === 'light' || !resolvedTheme ? (
-        <FontAwesomeIcon
-          icon={faLightbulb}
-          className="h-5 w-5 text-slate-800"
-        />
-      ) : (
-        <FontAwesomeIcon
-          icon={faLightbulb}
-          className="h-5 w-5 text-orange-300"
-        />
-      )}
-    </button>
+    <div className="flex relative float-right transition-colors ">
+      <input
+        type="checkbox"
+        className="toggle toggle-lg flex items-center justify-center mt-4 mr-4 text-transparent border-box"
+        onChange={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+        value={resolvedTheme}
+        checked={
+          resolvedTheme == 'light'
+            ? false
+            : resolvedTheme == 'dark'
+            ? true
+            : false
+        }
+      ></input>
+
+      <FontAwesomeIcon
+        icon={faMoon}
+        className={cn(
+          'absolute inset-y-0 right-7 mt-6 flex items-center pointer-events-none text-white dark:text-transparent'
+        )}
+      />
+      <FontAwesomeIcon
+        icon={faSun}
+        className={cn(
+          'absolute inset-y-0 left-2.5 mt-6 flex items-center pointer-events-none text-transparent dark:text-orange-300'
+        )}
+      />
+    </div>
   );
 };

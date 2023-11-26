@@ -1,9 +1,10 @@
 import { Timeline } from '@/components/timeline';
+import { MotionWrapper } from '@/components/motion-wrapper';
 
 export default function Home() {
   return (
     <main className="flex items-center transition-colors">
-      <div className="wrapper">
+      <MotionWrapper>
         <div className="container">
           <div className="flex flex-col justify-between">
             <p className="text-2xl p-2">Hi👋, I am Berker.</p>
@@ -14,7 +15,7 @@ export default function Home() {
               years.
             </p>
 
-            <div className="card shadow-xl m-6">
+            <div className="card shadow-xl m-6 transition-colors">
               <div className="card-body">
                 <h2 className="card-title p-4">Journey</h2>
                 <div>
@@ -24,7 +25,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </MotionWrapper>
     </main>
   );
 }

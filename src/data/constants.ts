@@ -88,7 +88,7 @@ export const Journey: Array<JourneyItemType> = [
     startDate: 'August 2022',
     endDate: 'September 2022',
     description:
-      'I learnt many tips and infos about React and JavaScript, also meet with great people in the bootcamp.',
+      'I learnt many tips and infos about React and JavaScript, also met with great people in the bootcamp.',
   },
   {
     title: 'English Teacher 📖',
@@ -97,6 +97,15 @@ export const Journey: Array<JourneyItemType> = [
     startDate: 'June 2022',
     endDate: 'October 2022',
     description: 'This was the last teaching experience I have had.',
+  },
+  {
+    title: 'Coming Back To Turkey 🛬',
+    university: null,
+    company: null,
+    startDate: 'March 2022',
+    endDate: null,
+    description:
+      'I decided to come back to my hometown and focus to my software development learning process.',
   },
   {
     title: 'Self Learning Process 💻',
@@ -114,7 +123,15 @@ export const Journey: Array<JourneyItemType> = [
     startDate: 'September 2021',
     endDate: 'March 2022',
     description:
-      'After 3 months of internship in Krakow, I was entitled to work as English Teacher in Poland. It was a great experience.',
+      'After 3 months of internship in Krakow, I got a job offer as English Teacher in Poland. It was a great experience.',
+  },
+  {
+    title: 'Moving To Poland 🛫',
+    university: null,
+    company: null,
+    startDate: 'September 2021',
+    endDate: null,
+    description: 'I entitled to have an internship in Krakow.',
   },
   {
     title: 'English Teacher 📖',
