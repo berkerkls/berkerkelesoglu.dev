@@ -34,8 +34,9 @@ export const WritingRow = ({ writing }: any) => {
             <Image
               src={`https:${thumbnail.fields.file.url}`}
               alt="Shoes"
-              width={thumbnail.fields.file.details.image.width}
-              height={thumbnail.fields.file.details.image.height}
+              width={100}
+              height={100}
+              className="object-fit object-cover"
             />
           </div>
         </div>
