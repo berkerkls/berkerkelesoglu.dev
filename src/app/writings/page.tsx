@@ -1,4 +1,3 @@
-'use client';
 import { getInitialProps } from '@/data/contentful';
 import { WritingRow } from '@/components/writing-row';
 import { MotionWrapper } from '@/components/motion-wrapper';
@@ -35,9 +34,7 @@ export default async function Page() {
             </p>
             <div className="flex flex-col w-full" suppressHydrationWarning>
               {writings.map((writing: any) => (
-                <motion.div whileHover={{ scale: 1.05 }} key={writing.sys.id}>
-                  <WritingRow writing={writing} />
-                </motion.div>
+                <WritingRow writing={writing} />
               ))}
             </div>
           </div>

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
 export const WritingRow = ({ writing }: any) => {
   const { title, slug, thumbnail, featuredImage, publishDate, topic } =
     writing.fields;
@@ -24,7 +25,9 @@ export const WritingRow = ({ writing }: any) => {
   // }
 
   return (
-    <div
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      key={writing.sys.id}
       onClick={() => routeToWriting(`/writings/${slug}`)}
       className="grid grid-cols-5 font-medium mb-8 p-4 border-b-2 cursor-pointer"
     >
@@ -61,6 +64,6 @@ export const WritingRow = ({ writing }: any) => {
           Read
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
