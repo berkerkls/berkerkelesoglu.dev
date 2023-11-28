@@ -1,7 +1,4 @@
 import './globals.css';
-import { config } from '@fortawesome/fontawesome-svg-core';
-import '@fortawesome/fontawesome-svg-core/styles.css';
-config.autoAddCss = false;
 import type { Metadata } from 'next';
 import { MenuItems } from '@/components/menu-items';
 import { ThemeButton } from '@/components/theme-button';
@@ -18,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className="transition-colors">
-      <body suppressHydrationWarning>
+      <body>
         <Providers>
           <ThemeButton />
         </Providers>

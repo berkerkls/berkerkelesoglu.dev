@@ -13,7 +13,7 @@ export const ProfileCard = () => {
                 width={50}
                 height={50}
                 alt="picture of myself"
-                priority={true}
+                priority
               />
             </div>
           </div>

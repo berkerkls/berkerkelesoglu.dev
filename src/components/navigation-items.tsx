@@ -1,5 +1,3 @@
-'use-client';
-
 import { MenuItem } from './menu-item';
 import { Navigations } from '@/data/constants';
 import { LinkType } from '@/models/models';

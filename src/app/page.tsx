@@ -3,7 +3,10 @@ import { MotionWrapper } from '@/components/motion-wrapper';
 
 export default function Home() {
   return (
-    <main className="flex items-center transition-colors">
+    <main
+      className="flex items-center transition-colors"
+      suppressHydrationWarning
+    >
       <MotionWrapper>
         <div className="container">
           <div className="flex flex-col justify-between">

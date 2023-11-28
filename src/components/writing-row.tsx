@@ -36,6 +36,7 @@ export const WritingRow = ({ writing }: any) => {
               alt="Shoes"
               width={100}
               height={100}
+              priority
               className="object-fit object-cover"
             />
           </div>

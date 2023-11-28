@@ -39,7 +39,7 @@ export default async function WritingPage({ params }: any) {
         <div className="mb-4 mt-4 last:mb-0 text-lg">{children}</div>
       ),
       [BLOCKS.HEADING_2]: (_: any, children: any) => (
-        <div className="mb-4 font-bold">{children}</div>
+        <div className="mb-4">{children}</div>
       ),
       [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
         return (
