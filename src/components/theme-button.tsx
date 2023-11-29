@@ -16,9 +16,9 @@ export const ThemeButton = () => {
     return twMerge(...args);
   };
 
-  // if (!mounted) {
-  //   return null;
-  // }
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div className="flex relative float-right transition-colors ">
