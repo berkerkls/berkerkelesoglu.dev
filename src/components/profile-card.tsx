@@ -3,22 +3,22 @@ import ProfileImage from '@/assets/berker.jpg';
 
 export const ProfileCard = () => {
   return (
-    <div className="card w-96 transition-colors shadow-lg">
+    <div className="card w-80 transition-colors shadow-lg">
       <div className="card-body">
-        <div className="flex justify-between items-center w-64">
+        <div className="flex justify-around items-center">
           <div className="avatar">
             <div className="rounded-full">
               <Image
                 src={ProfileImage}
-                width={50}
-                height={50}
-                alt="picture of myself"
+                width={40}
+                height={40}
+                alt="Berker Kelesoglu"
                 priority
               />
             </div>
           </div>
           <div className="flex flex-col">
-            <span className="card-title">Berker Keleşoğlu</span>
+            <span className="text-xl font-semibold">Berker Keleşoğlu</span>
             <span className="card-text text-left mt-2 text-sm">
               Software Developer
             </span>
