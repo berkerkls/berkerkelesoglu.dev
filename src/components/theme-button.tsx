@@ -2,29 +2,28 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { useTheme } from 'next-themes';
-import { useState, useEffect } from 'react';
-import { twMerge } from 'tailwind-merge';
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 export const ThemeButton = () => {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState<boolean>(false);
+
   useEffect(() => {
     setMounted(true);
-  }, [resolvedTheme]);
-
-  const cn = (...args: Array<string>) => {
-    return twMerge(...args);
-  };
-
-  if (!mounted) {
-    return null;
-  }
+  }, [mounted]);
 
   return (
-    <div className="flex relative float-right transition-colors ">
+    <motion.div
+      initial={{ opacity: 0, y: 15 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 15 }}
+      transition={{ delay: 0.2 }}
+      className="relative transition-colors"
+    >
       <input
         type="checkbox"
-        className="toggle toggle-lg flex items-center justify-center mt-4 mr-4 text-transparent border-box"
+        className="toggle absolute right-0 flex mt-4 mr-4 text-transparent"
         onChange={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
         value={resolvedTheme}
         checked={
@@ -38,16 +37,16 @@ export const ThemeButton = () => {
 
       <FontAwesomeIcon
         icon={faMoon}
-        className={cn(
-          'absolute inset-y-0 right-7 mt-6 flex items-center pointer-events-none text-white dark:text-transparent'
-        )}
+        className=" 
+          absolute inset-y-0 right-6 mt-5 w-2.5 flex items-center pointer-events-none text-white dark:text-transparent
+        "
       />
       <FontAwesomeIcon
         icon={faSun}
-        className={cn(
-          'absolute inset-y-0 left-2.5 mt-6 flex items-center pointer-events-none text-transparent dark:text-orange-300'
-        )}
+        className=" 
+           absolute inset-y-0 right-11  mt-5 w-3 flex items-center pointer-events-none text-transparent dark:text-orange-300
+        "
       />
-    </div>
+    </motion.div>
   );
 };

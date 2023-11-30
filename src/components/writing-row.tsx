@@ -1,8 +1,6 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
-import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 export const WritingRow = ({ writing }: any) => {
@@ -11,18 +9,9 @@ export const WritingRow = ({ writing }: any) => {
 
   const router = useRouter();
 
-  const [mounted, setMounted] = useState(false);
-
   const routeToWriting = (route: string) => {
     router.push(route);
   };
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  // if (!mounted) {
-  //   return null;
-  // }
 
   return (
     <motion.div

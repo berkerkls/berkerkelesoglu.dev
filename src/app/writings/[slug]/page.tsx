@@ -36,7 +36,7 @@ export default async function WritingPage({ params }: any) {
     },
     renderNode: {
       [BLOCKS.PARAGRAPH]: (_: any, children: any) => (
-        <div className="mb-4 mt-4 last:mb-0 text-lg">{children}</div>
+        <div className="mb-4 mt-4 last:mb-0 text-lg ">{children}</div>
       ),
       [BLOCKS.HEADING_2]: (_: any, children: any) => (
         <div className="mb-4">{children}</div>
@@ -57,14 +57,16 @@ export default async function WritingPage({ params }: any) {
 
   return (
     <MotionWrapper>
-      <div className="container flex flex-col">
-        <p className="text-4xl mb-4">{title}</p>
-        <div className="flex">
-          <span className="badge mr-4 text-center badge-black">{topic}</span>
-          <p className="font-light">{publishDate}</p>
+      <div className="flex flex-col lg:mt-0 xs:mt-10">
+        <p className="text-4xl mb-4 xs:text-2xl">{title}</p>
+        <div className="flex flex-col lg:flex-row">
+          <span className="badge mr-4 mb-4 p-2 text-center badge-black xs:badge-xs xs:text-xs">
+            {topic}
+          </span>
+          <p className="font-light xs:text-sm">{publishDate}</p>
         </div>
       </div>
-      <div className="container">
+      <div className="content">
         {featuredImage && (
           <Image
             src={`https:${featuredImage.fields.file.url}`}

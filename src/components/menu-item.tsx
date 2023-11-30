@@ -20,9 +20,9 @@ export const MenuItem = memo(({ href, label, icon }: MenuItemType) => {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex gap-3 items-center rounded-lg w-36 p-5 hover:opacity-75"
+        className="flex gap-2 items-center rounded-lg w-28 p-2 hover:opacity-75"
       >
-        <FontAwesomeIcon icon={icon} className="h-5 w-5" />
+        <FontAwesomeIcon icon={icon} className="h-3 w-3" />
         <span>{label}</span>
       </a>
     );
@@ -32,11 +32,11 @@ export const MenuItem = memo(({ href, label, icon }: MenuItemType) => {
     <Link
       href={href}
       className={cn(
-        'flex gap-3 items-center rounded-lg transition-colors w-36 p-5 hover:opacity-75',
+        'flex gap-2 items-center rounded-lg transition-colors w-28 p-3 hover:opacity-75',
         href === pathName ? 'bg-slate-200 text-black' : ''
       )}
     >
-      <FontAwesomeIcon icon={icon} className="h-5 w-5" />
+      <FontAwesomeIcon icon={icon} className="h-3 w-3" />
       <span>{label}</span>
     </Link>
   );

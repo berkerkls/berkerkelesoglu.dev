@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { MenuItems } from '@/components/menu-items';
 import { ThemeButton } from '@/components/theme-button';
+import { TopTools } from '@/components/top-tools';
 import Providers from './provider';
 export const metadata: Metadata = {
   title: 'Berker Kelesoglu',
@@ -14,22 +15,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className="transition-colors">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        <Providers>
-          <ThemeButton />
-        </Providers>
-
-        <div className="flex transition-colors">
-          <div className="lg:flex md:hidden sm:hidden min-h-screen">
-            <div className="w-1/4">
-              <MenuItems />
+        <main className="min-h-screen w-screen">
+          <TopTools />
+          <div className="lg:flex transition-colors">
+            <div className="lg:flex md:hidden sm:hidden xs:hidden min-h-screen">
+              <div className="w-1/4">
+                <MenuItems />
+              </div>
+            </div>
+            <div className="flex justify-center w-screen min-h-screen">
+              <div className="py-12">{children}</div>
             </div>
           </div>
-          <div className="flex justify-center w-3/4 min-h-screen">
-            <div className="p-10">{children}</div>
-          </div>
-        </div>
+        </main>
       </body>
     </html>
   );

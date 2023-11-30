@@ -6,9 +6,9 @@ import { LinkType } from '@/models/models';
 
 export const OnlineLinks = () => {
   return (
-    <div className="card w-80 transition-colors  shadow-xl">
+    <div className="card w-72 transition-colors shadow-xl">
       <div className="card-body">
-        <h2 className="card-title dark:text-white">Online</h2>
+        <h2 className="text-lg dark:text-white">Online</h2>
         <ul className="menu rounded-box">
           {Links &&
             Links.map((item: LinkType) => (

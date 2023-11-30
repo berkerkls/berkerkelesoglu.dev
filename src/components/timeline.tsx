@@ -13,16 +13,16 @@ export const Timeline = () => {
               icon={faCirclePlus}
               className="absolute w-4 h-4 rounded-full mt-1.5 -start-1.5"
             />
-            <time className="mb-1 text-sm font-normal leading-none text-gray-400">
+            <time className="text-sm font-normal leading-none text-gray-400">
               {`${item.startDate}${item.endDate ? ` - ${item.endDate}` : ''}`}
             </time>
             <h3 className="text-lg font-semibold transition-colors dark:text-gray-400">
               {item.title}
             </h3>
-            <h5 className="mb-1 text-sm font-normal leading-none  dark:text-gray-500">
+            <h5 className="text-sm font-normal leading-none  dark:text-gray-500">
               {item.company ? item.company : item.university}
             </h5>
-            <p className="mb-4 text-base font-normal dark:text-gray-500">
+            <p className="mb-4 text-base font-light dark:text-gray-500">
               {item.description}
             </p>
           </li>
