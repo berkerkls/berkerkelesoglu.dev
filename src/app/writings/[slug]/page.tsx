@@ -13,7 +13,7 @@ export const getInitialPaths = async () => {
   return res.items.map((item: any) => ({ slug: item.fields.slug }));
 };
 
-export async function getInitialParams(slug: any) {
+export async function fetchSingleWriting(slug: any) {
   const data = await client.getEntries({
     content_type: 'writing',
     'fields.slug': slug,
@@ -23,7 +23,7 @@ export async function getInitialParams(slug: any) {
 
 export default async function WritingPage({ params }: any) {
   const { slug } = params;
-  const { writing } = (await getInitialParams(slug)) as any;
+  const { writing } = (await fetchSingleWriting(slug)) as any;
   const { featuredImage, title, writingContent, publishDate, topic } =
     writing.fields;
 
