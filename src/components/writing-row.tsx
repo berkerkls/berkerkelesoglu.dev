@@ -12,20 +12,19 @@ export const WritingRow = ({ writing }: any) => {
   const routeToWriting = (route: string) => {
     router.push(route);
   };
-
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
       key={writing.sys.id}
       onClick={() => routeToWriting(`/writings/${slug}`)}
-      className="grid grid-cols-5 font-medium mb-8 p-4 border-b-2 cursor-pointer"
+      className="lg:grid lg:grid-cols-5 font-medium mb-8 p-4 border-b-2 cursor-pointer"
     >
-      <div className="flex justify-between items-start col-span-2 cursor-pointer">
+      <div className="flex lg:justify-between items-start col-span-2 cursor-pointer">
         <div className="avatar">
           <div className="mask mask-squircle w-12 h-12">
             <Image
               src={`https:${thumbnail.fields.file.url}`}
-              alt="Shoes"
+              alt={title}
               width={100}
               height={100}
               priority
@@ -40,12 +39,12 @@ export const WritingRow = ({ writing }: any) => {
         <span className="badge badge-outline badge-sm w-22">{publishDate}</span>
       </div>
 
-      <div className="text-right ">
+      <div className="text-right md:hidden sm:hidden xs:hidden">
         <span className="badge badge-default badge-sm p-2 text-gray-300">
           {topic}
         </span>
       </div>
-      <div className="text-right ">
+      <div className="text-right xs:hidden">
         <Link
           href={`/writings/${slug}`}
           className="btn btn-outline text-black btn-xs border "

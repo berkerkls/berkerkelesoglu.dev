@@ -25,7 +25,7 @@ export default function RootLayout({
               </div>
             </div>
             <div className="flex justify-center w-screen min-h-screen">
-              <div className="py-12 mt-2">{children}</div>
+              <div className="py-10">{children}</div>
             </div>
           </div>
         </main>

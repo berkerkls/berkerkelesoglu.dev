@@ -17,7 +17,7 @@ export const TopTools = () => {
   };
 
   return (
-    <div className="relative flex justify-between">
+    <div className="relative flex justify-between bg-white dark:bg-black h-16 lg:h-0 sticky top-0 z-50">
       <motion.div
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
