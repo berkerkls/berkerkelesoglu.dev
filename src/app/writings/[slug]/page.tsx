@@ -3,7 +3,7 @@ import { MotionWrapper } from '@/components/motion-wrapper';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Image from 'next/image';
-export const client = createClient({
+const client = createClient({
   space: `${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}`,
   accessToken: `${process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN}`,
 });
