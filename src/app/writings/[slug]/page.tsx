@@ -13,7 +13,7 @@ export const getInitialPaths = async () => {
   return res.items.map((item: any) => ({ slug: item.fields.slug }));
 };
 
-export async function fetchSingleWriting(slug: any) {
+async function fetchSingleWriting(slug: any) {
   const data = await client.getEntries({
     content_type: 'writing',
     'fields.slug': slug,
