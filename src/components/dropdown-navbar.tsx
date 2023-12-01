@@ -6,8 +6,8 @@ import { Navigations } from '@/data/constants';
 import { MenuItem } from './menu-item';
 export const DropdownNavbar = () => {
   const [isActive, setIsActive] = useState(false);
-  const dropdown = useRef(null);
-  const hamburger = useRef(null);
+  const dropdown = useRef<any>(null);
+  const hamburger = useRef<any>(null);
   const cn = (...args: Array<string>) => {
     return twMerge(...args);
   };
