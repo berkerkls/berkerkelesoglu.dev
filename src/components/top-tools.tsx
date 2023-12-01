@@ -7,6 +7,7 @@ import Providers from '@/app/provider';
 import { ThemeButton } from './theme-button';
 import { twMerge } from 'tailwind-merge';
 import { useRouter } from 'next/navigation';
+import { DropdownNavbar } from '@/components/dropdown-navbar';
 
 export const TopTools = () => {
   const router = useRouter();
@@ -16,19 +17,21 @@ export const TopTools = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative flex justify-between">
       <motion.div
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 15 }}
         transition={{ delay: 0.2 }}
       >
+        <DropdownNavbar />
+
         <FontAwesomeIcon
           onClick={() => router.push('/writings')}
-          size={'xs'}
+          size={'lg'}
           icon={faArrowLeft}
           className={cn(
-            'btn btn-xs btn-ghost lg:hidden absolute left-4 mt-4 cursor-pointer',
+            'lg:hidden absolute left-12 mt-5 py-0.5 ml-3 cursor-pointer',
             !params.slug ? 'hidden' : ''
           )}
         />
