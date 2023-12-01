@@ -3,17 +3,22 @@ import { MotionWrapper } from '@/components/motion-wrapper';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Image from 'next/image';
-const client = createClient({
-  space: `${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}`,
-  accessToken: `${process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN}`,
-});
-export const getInitialPaths = async () => {
+
+export const generateStaticParams = async () => {
+  const client = createClient({
+    space: `${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}`,
+    accessToken: `${process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN}`,
+  });
   const res = await client.getEntries({ content_type: 'writing' });
 
   return res.items.map((item: any) => ({ slug: item.fields.slug }));
 };
 
 async function fetchSingleWriting(slug: any) {
+  const client = createClient({
+    space: `${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}`,
+    accessToken: `${process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN}`,
+  });
   const data = await client.getEntries({
     content_type: 'writing',
     'fields.slug': slug,

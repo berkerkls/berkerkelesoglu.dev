@@ -1,8 +1,6 @@
 import { getInitialProps } from '@/data/contentful';
 import { WritingRow } from '@/components/writing-row';
 import { MotionWrapper } from '@/components/motion-wrapper';
-import { motion } from 'framer-motion';
-import { client } from './[slug]/page';
 interface writingType {
   title: string;
   slug: string;
