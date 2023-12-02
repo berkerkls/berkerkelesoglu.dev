@@ -1,8 +1,9 @@
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 export interface LinkType {
   href: string;
   label: string;
-  icon: IconProp;
+  icon: IconDefinition;
 }
 
 export interface MenuItemType {

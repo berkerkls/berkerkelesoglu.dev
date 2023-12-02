@@ -24,9 +24,7 @@ export default function RootLayout({
                 <MenuItems />
               </div>
             </div>
-            <div className="flex justify-center w-screen min-h-screen">
-              <div className="py-10">{children}</div>
-            </div>
+            <div className="flex w-screen min-h-screen py-12">{children}</div>
           </div>
         </main>
       </body>

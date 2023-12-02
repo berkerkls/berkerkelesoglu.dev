@@ -39,12 +39,12 @@ export const WritingRow = ({ writing }: any) => {
         <span className="badge badge-outline badge-sm w-22">{publishDate}</span>
       </div>
 
-      <div className="text-right md:hidden sm:hidden xs:hidden">
+      <div className="xs:hidden lg:flex justify-end">
         <span className="badge badge-default badge-sm p-2 text-gray-300">
           {topic}
         </span>
       </div>
-      <div className="text-right xs:hidden">
+      <div className="xs:hidden lg:flex justify-end">
         <Link
           href={`/writings/${slug}`}
           className="btn btn-outline text-black btn-xs border "

@@ -23,7 +23,7 @@ export const MenuItem = memo(({ href, label, icon }: MenuItemType) => {
         className="flex gap-2 items-center rounded-lg w-28 p-2 hover:opacity-75"
       >
         <FontAwesomeIcon icon={icon} className="h-3 w-3" />
-        <span>{label}</span>
+        <span className="xs:hidden lg:flex">{label}</span>
       </a>
     );
   }

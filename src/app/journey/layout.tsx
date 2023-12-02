@@ -1,4 +1,4 @@
-export default async function WritingLayout({
+export default async function JourneyLayout({
   children,
 }: {
   children: React.ReactNode;

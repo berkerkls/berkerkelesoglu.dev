@@ -27,7 +27,7 @@ export default async function Page() {
           <div className="flex flex-col justify-between">
             <p className="text-xl mb-2">Writings</p>
             <p className="text-lg p-2 text-left font-light mb-4">
-              Here is my writings that I published on Medium. Not much software
+              Here are my writings that I published on Medium. Not much software
               related articles now but will be more in months for sure.🛠️
             </p>
             <div className="flex flex-col w-full" suppressHydrationWarning>

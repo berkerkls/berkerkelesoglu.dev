@@ -6,10 +6,10 @@ import {
   faLinkedin,
   faGithub,
   faMedium,
-  faSpotify,
+  faSpotify
 } from '@fortawesome/free-brands-svg-icons';
 
-import { faHouse, faPencil, faMusic } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faPencil, faMusic, faTimeline } from '@fortawesome/free-solid-svg-icons';
 
 export const Links: Array<LinkType> = [
   {
@@ -51,15 +51,20 @@ export const Navigations: Array<LinkType> = [
     icon: faHouse,
   },
   {
+    href: '/journey',
+    label: 'Journey',
+    icon: faTimeline,
+  },
+  {
     href: '/writings',
     label: 'Writings',
     icon: faPencil,
   },
-  {
-    href: '/musictools',
-    label: 'Tools',
-    icon: faMusic,
-  },
+  // {
+  //   href: '/musictools',
+  //   label: 'Tools',
+  //   icon: faMusic,
+  // },
 ];
 
 export const Journey: Array<JourneyItemType> = [

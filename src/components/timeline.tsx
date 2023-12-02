@@ -11,7 +11,7 @@ export const Timeline = () => {
           <li className="mb-20 ms-4" key={index}>
             <FontAwesomeIcon
               icon={faCirclePlus}
-              className="absolute w-4 h-4 rounded-full mt-1.5 -start-1.5"
+              className="absolute w-4 h-4 rounded-full -start-1.5"
             />
             <time className="text-sm font-normal leading-none text-gray-400">
               {`${item.startDate}${item.endDate ? ` - ${item.endDate}` : ''}`}
