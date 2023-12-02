@@ -50,7 +50,7 @@ export default function Home() {
             })}
           </div>
           <div className="flex flex-col lg:flex-row justify-between items-center gap-16">
-            <div className="card w-80 shadow-md mt-4 transition-colors">
+            <div className="card lg:w-96 w-80 shadow-md mt-4 transition-colors">
               <div className="card-body">
                 <div className="card-text">
                   I am a former English Teacher who have worked in Türkiye and
@@ -67,7 +67,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="card w-80 shadow-md mt-4 transition-colors">
+            <div className="card lg:w-96 w-80 shadow-md mt-4 transition-colors">
               <div className="card-body">
                 <div className="card-text">
                   I use{' '}
