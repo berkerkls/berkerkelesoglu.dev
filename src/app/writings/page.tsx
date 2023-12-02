@@ -1,13 +1,8 @@
 import { getInitialProps } from '@/data/contentful';
 import { WritingRow } from '@/components/writing-row';
 import { MotionWrapper } from '@/components/motion-wrapper';
-interface writingType {
-  title: string;
-  slug: string;
-  thumbnail: any;
-  featuredImage: any;
-  writingContent: any;
-}
+import { Entry } from 'contentful';
+import { EntrySkeletonType } from 'contentful';
 
 const fetchWritings = async () => {
   const data = await getInitialProps();
@@ -16,6 +11,7 @@ const fetchWritings = async () => {
 
 export default async function Page() {
   const writings = await fetchWritings();
+  console.log('writings', writings);
 
   return (
     <main
@@ -31,7 +27,7 @@ export default async function Page() {
               related articles now but will be more in months for sure.🛠️
             </p>
             <div className="flex flex-col w-full" suppressHydrationWarning>
-              {writings.map((writing: any) => (
+              {writings.map((writing: Entry<EntrySkeletonType>) => (
                 <WritingRow writing={writing} key={writing.sys.id} />
               ))}
             </div>

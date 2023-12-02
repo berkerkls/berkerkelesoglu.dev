@@ -8,6 +8,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MenuItem } from '@/components/menu-item';
 import { Links } from '@/data/constants';
+import { LinkType } from '@/models/models';
 
 export default function Home() {
   return (
@@ -38,7 +39,7 @@ export default function Home() {
             </a>
           </div>
           <div className="flex justify-between items-center w-80 ml-10 mt-5 lg:hidden">
-            {Links.map((el: any, index: number) => {
+            {Links.map((el: LinkType, index: number) => {
               return (
                 <MenuItem
                   key={index}

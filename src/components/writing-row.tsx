@@ -3,9 +3,22 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
-export const WritingRow = ({ writing }: any) => {
-  const { title, slug, thumbnail, featuredImage, publishDate, topic } =
-    writing.fields;
+import { Entry } from 'contentful';
+import { EntrySkeletonType } from 'contentful';
+import { FieldsType } from 'contentful';
+export const WritingRow = ({
+  writing,
+}: {
+  writing: Entry<EntrySkeletonType>;
+}) => {
+  const {
+    title,
+    slug,
+    thumbnail,
+    featuredImage,
+    publishDate,
+    topic,
+  }: FieldsType = writing.fields;
 
   const router = useRouter();
 

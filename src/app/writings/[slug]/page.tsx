@@ -1,8 +1,19 @@
-import { createClient } from 'contentful';
+import { ContentTypeFieldValidation, createClient } from 'contentful';
 import { MotionWrapper } from '@/components/motion-wrapper';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { Entry } from 'contentful';
+import { EntrySkeletonType } from 'contentful';
+import { FieldsType } from 'contentful';
+import { Document } from '@contentful/rich-text-types';
 import Image from 'next/image';
+
+interface WritingObject {
+  params: SlugObject;
+}
+interface SlugObject {
+  slug: string;
+}
 
 export const generateStaticParams = async () => {
   const client = createClient({
@@ -11,10 +22,12 @@ export const generateStaticParams = async () => {
   });
   const res = await client.getEntries({ content_type: 'writing' });
 
-  return res.items.map((item: any) => ({ slug: item.fields.slug }));
+  return res.items.map((item: Entry<EntrySkeletonType>) => ({
+    slug: item.fields.slug,
+  }));
 };
 
-async function fetchSingleWriting(slug: any) {
+async function fetchSingleWriting(slug: string) {
   const client = createClient({
     space: `${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}`,
     accessToken: `${process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN}`,
@@ -26,27 +39,34 @@ async function fetchSingleWriting(slug: any) {
   return { writing: data.items[0] };
 }
 
-export default async function WritingPage({ params }: any) {
+export default async function WritingPage({ params }: WritingObject) {
   const { slug } = params;
-  const { writing } = (await fetchSingleWriting(slug)) as any;
-  const { featuredImage, title, writingContent, publishDate, topic } =
-    writing.fields;
+  const { writing } = (await fetchSingleWriting(slug)) as {
+    writing: Entry<EntrySkeletonType>;
+  };
+  const {
+    featuredImage,
+    title,
+    writingContent,
+    publishDate,
+    topic,
+  }: FieldsType = writing.fields;
 
   const renderOptions = {
     renderMark: {
-      [MARKS.BOLD]: (text: any) => (
+      [MARKS.BOLD]: (text: string) => (
         <span className="font-semibold text-black">{text}</span>
       ),
-      [MARKS.ITALIC]: (text: any) => <span className="italic">{text}</span>,
+      [MARKS.ITALIC]: (text: string) => <span className="italic">{text}</span>,
     },
     renderNode: {
-      [BLOCKS.PARAGRAPH]: (_: any, children: any) => (
+      [BLOCKS.PARAGRAPH]: (_: unknown, children: string) => (
         <div className="mb-4 mt-4 last:mb-0 text-lg ">{children}</div>
       ),
-      [BLOCKS.HEADING_2]: (_: any, children: any) => (
+      [BLOCKS.HEADING_2]: (_: unknown, children: string) => (
         <div className="mb-4">{children}</div>
       ),
-      [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
+      [BLOCKS.EMBEDDED_ASSET]: (node: Document) => {
         return (
           <Image
             src={`https:${node.data.target.fields.file.url}`}
@@ -58,7 +78,7 @@ export default async function WritingPage({ params }: any) {
         );
       },
     },
-  };
+  } as any;
 
   return (
     <MotionWrapper>
@@ -82,7 +102,7 @@ export default async function WritingPage({ params }: any) {
             priority
           />
         )}
-        {writingContent.content.map((writingItem: any, index: any) => {
+        {writingContent.content.map((writingItem: Document, index: number) => {
           return (
             <div key={index}>
               {documentToReactComponents(writingItem, renderOptions)}
