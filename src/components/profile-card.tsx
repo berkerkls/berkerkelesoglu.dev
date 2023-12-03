@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import ProfileImage from '@/assets/berker.jpg';
+import ProfileImage from '../../public/assets/berker.jpg';
 
 export const ProfileCard = () => {
   return (

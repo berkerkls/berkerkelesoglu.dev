@@ -38,7 +38,7 @@ export default function Home() {
               />
             </a>
           </div>
-          <div className="flex justify-between items-center w-80 ml-10 mt-5 lg:hidden">
+          <div className="flex justify-between items-center w-80 mx-auto mt-5 lg:hidden">
             {Links.map((el: LinkType, index: number) => {
               return (
                 <MenuItem
@@ -50,8 +50,8 @@ export default function Home() {
               );
             })}
           </div>
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-16">
-            <div className="card lg:w-96 w-80 shadow-md mt-4 transition-colors">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-16 w-full">
+            <div className="card lg:w-96 w-80  mt-4 transition-colors">
               <div className="card-body">
                 <div className="card-text">
                   I am a former English Teacher who have worked in Türkiye and
@@ -68,7 +68,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="card lg:w-96 w-80 shadow-md mt-4 transition-colors">
+            <div className="card lg:w-96 w-80 mt-4 transition-colors">
               <div className="card-body">
                 <div className="card-text">
                   I use{' '}

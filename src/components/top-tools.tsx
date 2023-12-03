@@ -9,7 +9,7 @@ import { twMerge } from 'tailwind-merge';
 import { useRouter } from 'next/navigation';
 import { DropdownNavbar } from '@/components/dropdown-navbar';
 import Image from 'next/image';
-import ProfileImage from '@/assets/berker.jpg';
+import ProfileImage from '../../public/assets/berker.jpg';
 
 export const TopTools = () => {
   const router = useRouter();

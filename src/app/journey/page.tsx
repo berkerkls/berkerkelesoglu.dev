@@ -1,6 +1,9 @@
 import { Timeline } from '@/components/timeline';
 import { MotionWrapper } from '@/components/motion-wrapper';
-
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'Journey',
+};
 export default function Layout() {
   return (
     <main className="flex items-center transition-colors">
