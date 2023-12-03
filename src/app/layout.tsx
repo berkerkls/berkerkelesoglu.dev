@@ -6,6 +6,7 @@ import { MenuItems } from '@/components/menu-items';
 import { TopTools } from '@/components/top-tools';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://berkerkelesoglu.dev'),
   title: {
     default: 'Berker Keleşoğlu',
     template: '%s | Berker',
@@ -13,10 +14,15 @@ export const metadata: Metadata = {
   description: 'Software Developer and Musician based in Istabnbul',
   icons: {
     icon: ['/favicon.ico?v=4'],
-    apple: ['/apple-touch-icon.png?v=4'],
+    apple: ['/apple-touch-icon.png?v=4  '],
     shortcut: ['/apple-touch-icon.png'],
   },
-  manifest: 'site.webmanifest',
+  openGraph: {
+    images: ['/berkerkelesogludev.png'],
+  },
+  twitter: {
+    images: ['/berkerkelesogludev.png'],
+  },
 };
 
 export default function RootLayout({
