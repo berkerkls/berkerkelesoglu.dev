@@ -18,17 +18,15 @@ export const DropdownNavbar = () => {
   };
 
   useEffect(() => {
-    const handleOutSideClick = (
-      event: React.ChangeEvent<HTMLButtonElement>
-    ) => {
+    const handleOutSideClick = ({ target }: MouseEvent): void => {
       if (
-        !dropdown.current?.contains(event.target) &&
-        !hamburger.current?.contains(event.target)
+        !dropdown.current?.contains(target as Node) &&
+        !hamburger.current?.contains(target as Node)
       ) {
         setIsActive(false);
       }
     };
-    window.addEventListener('mousedown', () => handleOutSideClick);
+    window.addEventListener('mousedown', handleOutSideClick);
   }, []);
   return (
     <div className="transition-colors lg:hidden absolute left-2 mt-5">

@@ -1,3 +1,5 @@
+import { Lato } from 'next/font/google';
+const lato = Lato({ subsets: ['latin'], weight: '400' });
 import './globals.css';
 import type { Metadata } from 'next';
 import { MenuItems } from '@/components/menu-items';
@@ -14,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={lato.className} suppressHydrationWarning>
       <body>
         <main className="min-h-screen w-screen">
           <TopTools />

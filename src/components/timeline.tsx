@@ -16,15 +16,13 @@ export const Timeline = () => {
             <time className="text-sm font-normal leading-none text-gray-400">
               {`${item.startDate}${item.endDate ? ` - ${item.endDate}` : ''}`}
             </time>
-            <h3 className="text-lg font-semibold transition-colors dark:text-gray-400">
+            <h3 className="text-lg font-semibold transition-colors">
               {item.title}
             </h3>
             <h5 className="text-sm font-normal leading-none  dark:text-gray-500">
               {item.company ? item.company : item.university}
             </h5>
-            <p className="mb-4 text-base font-light dark:text-gray-500">
-              {item.description}
-            </p>
+            <p className="mb-4 text-base font-light">{item.description}</p>
           </li>
         );
       })}
