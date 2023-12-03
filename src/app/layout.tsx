@@ -25,7 +25,13 @@ export const metadata: Metadata = {
   twitter: {
     title: 'Berker Keleşoğlu',
     description: 'Software Developer',
-    images: ['/berkerkelesogludev.png'],
+    images: {
+      url: '/berkerkelesogludev.png',
+      width: 1200,
+      height: 630,
+      alt: 'Berker Keleşoğlu',
+      type: 'image/png',
+    },
     card: 'summary_large_image',
     creator: '@berkerkls',
   },
