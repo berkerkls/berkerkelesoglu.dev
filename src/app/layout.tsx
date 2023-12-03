@@ -11,16 +11,20 @@ export const metadata: Metadata = {
     default: 'Berker Keleşoğlu',
     template: '%s | Berker',
   },
-  description: 'Software Developer and Musician based in Istabnbul',
+  description: 'Software Developer and Musician based in Istanbul',
   icons: {
     icon: ['/favicon.ico?v=4'],
     apple: ['/apple-touch-icon.png?v=4  '],
     shortcut: ['/apple-touch-icon.png'],
   },
   openGraph: {
+    title: 'Berker Keleşoğlu',
+    description: 'Software Developer',
     images: ['/berkerkelesogludev.png'],
   },
   twitter: {
+    title: 'Berker Keleşoğlu',
+    description: 'Software Developer',
     images: ['/berkerkelesogludev.png'],
   },
 };
