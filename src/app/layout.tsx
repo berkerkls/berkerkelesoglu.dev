@@ -26,6 +26,8 @@ export const metadata: Metadata = {
     title: 'Berker Keleşoğlu',
     description: 'Software Developer',
     images: ['/berkerkelesogludev.png'],
+    card: 'summary_large_image',
+    creator: '@berkerkls',
   },
 };
 
