@@ -13,6 +13,10 @@ export const ThemeButton = () => {
     setMounted(true);
   }, [mounted]);
 
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 15 }}
@@ -23,7 +27,7 @@ export const ThemeButton = () => {
     >
       <input
         type="checkbox"
-        className="toggle absolute right-0 flex mt-4 mr-4 text-white"
+        className="toggle absolute right-0 flex mt-4 mr-4"
         onChange={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
         value={resolvedTheme}
         checked={
