@@ -1,4 +1,4 @@
-import { ContentTypeFieldValidation, createClient } from 'contentful';
+import { createClient } from 'contentful';
 import { MotionWrapper } from '@/components/motion-wrapper';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
