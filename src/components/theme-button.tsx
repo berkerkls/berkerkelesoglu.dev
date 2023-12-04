@@ -23,7 +23,7 @@ export const ThemeButton = () => {
     >
       <input
         type="checkbox"
-        className="toggle absolute right-0 flex mt-4 mr-4 text-transparent"
+        className="toggle absolute right-0 flex mt-4 mr-4 text-white"
         onChange={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
         value={resolvedTheme}
         checked={

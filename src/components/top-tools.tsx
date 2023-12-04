@@ -53,7 +53,7 @@ export const TopTools = () => {
           size={'lg'}
           icon={faArrowLeft}
           className={cn(
-            'lg:hidden absolute left-12 mt-5 py-0.5 ml-3 cursor-pointer',
+            'lg:hidden absolute left-10 mt-5 py-0.5 ml-3 cursor-pointer',
             !params.slug ? 'hidden' : ''
           )}
         />
