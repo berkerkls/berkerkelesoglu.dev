@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { Lato } from 'next/font/google';
 const lato = Lato({ subsets: ['latin'], weight: '400' });
 import './globals.css';
@@ -56,6 +57,7 @@ export default function RootLayout({
             <div className="flex w-screen min-h-screen py-12">{children}</div>
           </div>
         </main>
+        <Analytics />
       </body>
     </html>
   );
