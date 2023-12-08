@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     template: '%s | Berker',
   },
   description: 'Software Developer and Musician based in Istanbul',
+  verification: {
+    google: 'google-site-verification',
+  },
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+  },
   icons: {
     icon: ['/favicon.ico?v=4'],
     apple: ['/apple-touch-icon.png?v=4  '],

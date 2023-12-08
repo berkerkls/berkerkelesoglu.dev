@@ -15,6 +15,41 @@ interface SlugObject {
   slug: string;
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  try {
+    const { writing } = (await fetchSingleWriting(params.slug)) as {
+      writing: Entry<EntrySkeletonType>;
+    };
+    if (!writing) {
+      return {
+        title: 'Not Found',
+        description: 'The page you are looking for does not exist',
+      };
+    }
+    return {
+      title: writing.fields.title,
+      description: writing.fields.title,
+      alternates: {
+        canonical: `/writings/${writing.fields.slug}`,
+        languages: {
+          'en-US': `/en-US/writings/${writing.fields.slug}`,
+          'de-DE': `/de-DE/writings/${writing.fields.slug}`,
+        },
+      },
+    };
+  } catch (error) {
+    console.log(error);
+    return {
+      title: 'Not Found',
+      description: 'The page you are looking for does not exist',
+    };
+  }
+}
+
 export const generateStaticParams = async () => {
   const client = createClient({
     space: `${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}`,
