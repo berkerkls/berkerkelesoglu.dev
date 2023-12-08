@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://berkerkelesoglu.dev'),
   title: {
     default: 'Berker Keleşoğlu',
-    template: '%s | Berker',
+    template: '%s | Berker Kelesoglu',
   },
   description: 'Software Developer and Musician based in Istanbul',
   verification: {
