@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     google: 'google-site-verification',
   },
   robots: {
-    index: false,
+    index: true,
     follow: true,
     nocache: true,
   },
@@ -30,6 +30,8 @@ export const metadata: Metadata = {
     title: 'Berker Keleşoğlu',
     description: 'Software Developer',
     images: ['/berkerkelesogludev.png'],
+    siteName: 'Berker Keleşoğlu',
+    type: 'website',
   },
   twitter: {
     title: 'Berker Keleşoğlu',
@@ -44,6 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     creator: '@berkerkls',
   },
+  manifest: `https://berkerkelesoglu.dev/manifest.ts`,
 };
 
 export default function RootLayout({
