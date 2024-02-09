@@ -18,7 +18,7 @@ export const Links: Array<LinkType> = [
     icon: faTwitter,
   },
   {
-    href: 'https://www.instagram.com/berker.kls/',
+    href: 'https://www.instagram.com/berkerkls/',
     label: 'Instagram',
     icon: faInstagram,
   },
