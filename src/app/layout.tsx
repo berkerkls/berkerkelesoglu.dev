@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { Lato } from 'next/font/google';
 const lato = Lato({ subsets: ['latin'], weight: '400' });
 import './globals.css';
@@ -9,9 +10,17 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://berkerkelesoglu.dev'),
   title: {
     default: 'Berker Keleşoğlu',
-    template: '%s | Berker',
+    template: '%s | Berker Kelesoglu',
   },
   description: 'Software Developer and Musician based in Istanbul',
+  verification: {
+    google: 'google-site-verification',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+  },
   icons: {
     icon: ['/favicon.ico?v=4'],
     apple: ['/apple-touch-icon.png?v=4  '],
@@ -21,6 +30,8 @@ export const metadata: Metadata = {
     title: 'Berker Keleşoğlu',
     description: 'Software Developer',
     images: ['/berkerkelesogludev.png'],
+    siteName: 'Berker Keleşoğlu',
+    type: 'website',
   },
   twitter: {
     title: 'Berker Keleşoğlu',
@@ -35,6 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     creator: '@berkerkls',
   },
+  manifest: `https://berkerkelesoglu.dev/manifest.ts`,
 };
 
 export default function RootLayout({
@@ -56,6 +68,7 @@ export default function RootLayout({
             <div className="flex w-screen min-h-screen py-12">{children}</div>
           </div>
         </main>
+        <Analytics />
       </body>
     </html>
   );

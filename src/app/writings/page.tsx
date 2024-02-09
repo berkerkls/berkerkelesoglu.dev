@@ -3,6 +3,10 @@ import { WritingRow } from '@/components/writing-row';
 import { MotionWrapper } from '@/components/motion-wrapper';
 import { Entry } from 'contentful';
 import { EntrySkeletonType } from 'contentful';
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'Writings',
+};
 
 const fetchWritings = async () => {
   const data = await getInitialProps();
@@ -15,7 +19,7 @@ export default async function Page() {
 
   return (
     <main
-      className="flex items-center transition-colors"
+      className="wrapper flex items-center transition-colors"
       suppressHydrationWarning
     >
       <MotionWrapper>

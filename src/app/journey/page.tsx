@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 export default function Layout() {
   return (
-    <main className="flex items-center transition-colors">
+    <main className="wrapper flex items-center transition-colors">
       <MotionWrapper>
         <div className="container">
           <div className="flex flex-col">
