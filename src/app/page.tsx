@@ -12,7 +12,7 @@ import { LinkType } from '@/models/models';
 
 export default function Home() {
   return (
-    <main className="flex transition-colors p-3 lg:p-20">
+    <main className="wrapper flex transition-colors p-3 lg:p-20">
       <motion.div
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -116,7 +116,7 @@ export default function Home() {
                   hit me up. Besides of programming,I enjoy making and listening
                   music. See my playlists on{' '}
                   <a
-                    href="https://vuejs.org/"
+                    href="https://open.spotify.com/user/11125431324?si=e0d5cdbc4d004919&nd=1&dlsi=c2b35fd0f4564917"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="underline"
