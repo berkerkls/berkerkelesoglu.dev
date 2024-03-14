@@ -4,6 +4,6 @@ const client = createClient({
   accessToken: `${process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN}`,
 });
 export async function getInitialProps() {
-  const res = await client.getEntries({ content_type: 'writing' });
+  const res = await client.getEntries({ content_type: "writing" });
   return res.items ?? [];
 }
