@@ -1,13 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowUpRightDots,
-  faArrowUpRightFromSquare,
-} from "@fortawesome/free-solid-svg-icons";
-import { MenuItem } from "@/components/menu-item";
-import { Links } from "@/data/constants";
-import { LinkType } from "@/models/models";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import ProfileImage from "../../public/assets/berker.jpg";
 

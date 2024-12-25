@@ -3,7 +3,7 @@ import { Lato } from "next/font/google";
 const lato = Lato({ subsets: ["latin"], weight: "400" });
 import "./globals.css";
 import type { Metadata } from "next";
-import { MenuItems } from "@/components/menu-items";
+
 import { TopTools } from "@/components/top-tools";
 
 export const metadata: Metadata = {

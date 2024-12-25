@@ -12,8 +12,6 @@ import { Navigations } from "@/data/constants";
 import { LinkType } from "@/models/models";
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
 import { DropdownNavbar } from "@/components/dropdown-navbar";
-import Image from "next/image";
-import ProfileImage from "../../public/assets/berker.jpg";
 import { Links } from "@/data/constants";
 import { useState } from "react";
 
