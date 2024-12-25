@@ -1,131 +1,67 @@
-'use client';
-import { motion } from 'framer-motion';
+"use client";
+import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faUpwork,
-  faGithub,
-  faSpotify,
-} from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { MenuItem } from '@/components/menu-item';
-import { Links } from '@/data/constants';
-import { LinkType } from '@/models/models';
+  faArrowUpRightDots,
+  faArrowUpRightFromSquare,
+} from "@fortawesome/free-solid-svg-icons";
+import { MenuItem } from "@/components/menu-item";
+import { Links } from "@/data/constants";
+import { LinkType } from "@/models/models";
+import Image from "next/image";
+import ProfileImage from "../../public/assets/berker.jpg";
 
 export default function Home() {
+  const handleForwardEmail = () => {
+    const link = document.createElement("a");
+    link.href = "mailto:berkerkelesoglu@gmail.com";
+    link.target = "_blank";
+    link.click();
+  };
+
   return (
-    <main className="wrapper flex transition-colors p-3 lg:p-20">
+    <main className="wrapper  transition-colors p-3 " suppressHydrationWarning>
       <motion.div
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 15 }}
         transition={{ delay: 0.2 }}
+        className="flex justify-center items-center"
       >
-        <div className="flex flex-col justify-start items-start">
-          <p className="text-4xl p-2">Hey there👋, I am Berker.</p>
-          <p className="text-lg p-2 text-left">
-            Software developer based in Istanbul. I build websites and mobile
-            apps.
-          </p>
-          <div className="p-2 flex">
-            <p className="text-lg">Collaborate with me on</p>
-            <a
-              href="https://www.upwork.com/freelancers/~011da68a264a1c13a8"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon
-                icon={faUpwork}
-                className="h-6 w-6 mt-1 ml-2 hover:text-green-500"
-              />
-            </a>
-          </div>
-          <div className="flex justify-between items-center w-80 mx-auto mt-5 lg:hidden">
-            {Links.map((el: LinkType, index: number) => {
-              return (
-                <MenuItem
-                  key={index}
-                  href={el.href}
-                  label={el.label}
-                  icon={el.icon}
+        <div className="flex flex-col justify-start items-center gap-4 w-2/4 h-full">
+          <div className="flex justify-center items-center">
+            <div className="avatar rounded-full border-0 dark:border-white border-black">
+              <div
+                className="rounded-full"
+                style={{ position: "relative", width: 150, height: 150 }}
+              >
+                <Image
+                  src={ProfileImage}
+                  alt="Berker Kelesoglu"
+                  layout="fill"
+                  objectFit="covers"
+                  priority
                 />
-              );
-            })}
+              </div>
+            </div>
           </div>
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-16 w-full">
-            <div className="card lg:w-96 w-80  mt-4 transition-colors">
-              <div className="card-body">
-                <div className="card-text">
-                  I am a former English Teacher who have worked in Türkiye and
-                  Poland for 2 years. Now I have been moving on as Software
-                  Developer for 2 years. I think website or app ideas and make
-                  them come true to make life easier. See my projects on{' '}
-                  <a
-                    href="https://github.com/berkerkls"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FontAwesomeIcon icon={faGithub} className="ml-2" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="card lg:w-96 w-80 mt-4 transition-colors">
-              <div className="card-body">
-                <div className="card-text">
-                  I use{' '}
-                  <a
-                    href="https://vuejs.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline"
-                  >
-                    Vue,
-                  </a>{' '}
-                  <a
-                    href="https://nextjs.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline"
-                  >
-                    Next.js,
-                  </a>{' '}
-                  <a
-                    href="https://react.dev/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline"
-                  >
-                    React,
-                  </a>{' '}
-                  <a
-                    href="https://reactnative.dev/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline"
-                  >
-                    React-Native,
-                  </a>{' '}
-                  <a
-                    href="https://nodejs.org/en"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline"
-                  >
-                    Node.js
-                  </a>{' '}
-                  for my projects. If you have questions or any recommendations,
-                  hit me up. Besides of programming,I enjoy making and listening
-                  music. See my playlists on{' '}
-                  <a
-                    href="https://open.spotify.com/user/11125431324?si=e0d5cdbc4d004919&nd=1&dlsi=c2b35fd0f4564917"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline"
-                  >
-                    <FontAwesomeIcon icon={faSpotify} className="ml-2" />
-                  </a>
-                </div>
-              </div>
-            </div>
+          <div className="text-center">
+            <p className="text-darkSecondary p-2">
+              Hey 👋, I am Berker, software developer and musician currently
+              based in Poland.
+            </p>
+          </div>
+          <div className="lg:text-6xl md:text-2xl sm:text-2xl xs:text-2xl font-extrabold transition-colors bg-gradient-to-bl from-darkSecondary to-[#dcdcdc] bg-clip-text text-transparent text-center">
+            <h1>Building mobile and web application to solve user problems.</h1>
+          </div>
+          <div className="flex justify-center items-center">
+            <button
+              onClick={handleForwardEmail}
+              className="px-6 py-4 flex justify-between items-center w-40 dark:bg-black  bg-darkShadow text-white rounded-lg hover:opacity-75 text-md"
+            >
+              <span>Contact me</span>
+              <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+            </button>
           </div>
         </div>
       </motion.div>

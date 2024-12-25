@@ -1,20 +1,20 @@
-import { Analytics } from '@vercel/analytics/react';
-import { Lato } from 'next/font/google';
-const lato = Lato({ subsets: ['latin'], weight: '400' });
-import './globals.css';
-import type { Metadata } from 'next';
-import { MenuItems } from '@/components/menu-items';
-import { TopTools } from '@/components/top-tools';
+import { Analytics } from "@vercel/analytics/react";
+import { Lato } from "next/font/google";
+const lato = Lato({ subsets: ["latin"], weight: "400" });
+import "./globals.css";
+import type { Metadata } from "next";
+import { MenuItems } from "@/components/menu-items";
+import { TopTools } from "@/components/top-tools";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://berkerkelesoglu.dev'),
+  metadataBase: new URL("https://berkerkelesoglu.dev"),
   title: {
-    default: 'Berker Keleşoğlu',
-    template: '%s | Berker Kelesoglu',
+    default: "Berker Keleşoğlu",
+    template: "%s | Berker Kelesoglu",
   },
-  description: 'Software Developer and Musician based in Istanbul',
+  description: "Software Developer and Musician based in Istanbul",
   verification: {
-    google: 'google-site-verification',
+    google: "google-site-verification",
   },
   robots: {
     index: true,
@@ -22,29 +22,29 @@ export const metadata: Metadata = {
     nocache: true,
   },
   icons: {
-    icon: ['/favicon.ico?v=4'],
-    apple: ['/apple-touch-icon.png?v=4  '],
-    shortcut: ['/apple-touch-icon.png'],
+    icon: ["/favicon.ico?v=4"],
+    apple: ["/apple-touch-icon.png?v=4  "],
+    shortcut: ["/apple-touch-icon.png"],
   },
   openGraph: {
-    title: 'Berker Keleşoğlu',
-    description: 'Software Developer',
-    images: ['/berkerkelesogludev.png'],
-    siteName: 'Berker Keleşoğlu',
-    type: 'website',
+    title: "Berker Keleşoğlu",
+    description: "Software Developer",
+    images: ["/berkerkelesogludev.png"],
+    siteName: "Berker Keleşoğlu",
+    type: "website",
   },
   twitter: {
-    title: 'Berker Keleşoğlu',
-    description: 'Software Developer',
+    title: "Berker Keleşoğlu",
+    description: "Software Developer",
     images: {
-      url: '/berkerkelesogludev.png',
+      url: "/berkerkelesogludev.png",
       width: 1200,
       height: 630,
-      alt: 'Berker Keleşoğlu',
-      type: 'image/png',
+      alt: "Berker Keleşoğlu",
+      type: "image/png",
     },
-    card: 'summary_large_image',
-    creator: '@berkerkls',
+    card: "summary_large_image",
+    creator: "@berkerkls",
   },
   manifest: `https://berkerkelesoglu.dev/manifest.ts`,
 };
@@ -56,16 +56,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={lato.className} suppressHydrationWarning>
-      <body>
+      <body className="dark:bg-darkPrimary light:bg-lightPrimary">
         <main className="min-h-screen w-screen">
           <TopTools />
           <div className="lg:flex transition-colors">
-            <div className="lg:flex md:hidden sm:hidden xs:hidden min-h-screen">
-              <div className="w-1/4">
-                <MenuItems />
-              </div>
-            </div>
-            <div className="flex w-screen min-h-screen py-12">{children}</div>
+            <div className="flex w-screen py-12">{children}</div>
           </div>
         </main>
         <Analytics />

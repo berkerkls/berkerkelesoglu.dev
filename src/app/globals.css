@@ -4,7 +4,7 @@
 
 @layer components {
   .wrapper {
-    @apply mx-auto px-6 pb-8 lg:px-10 lg:pb-16 lg:pt-24;
+    @apply mx-auto px-6 pb-8 lg:px-10 lg:pb-14 lg:pt-14;
   }
 
   .container {

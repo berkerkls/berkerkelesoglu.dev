@@ -1,11 +1,11 @@
-'use client';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
-import { Entry } from 'contentful';
-import { EntrySkeletonType } from 'contentful';
-import { FieldsType } from 'contentful';
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
+import { Entry } from "contentful";
+import { EntrySkeletonType } from "contentful";
+import { FieldsType } from "contentful";
 export const WritingRow = ({
   writing,
 }: {
@@ -29,8 +29,8 @@ export const WritingRow = ({
     <motion.div
       whileHover={{ scale: 1.05 }}
       key={writing.sys.id}
-      onClick={() => routeToWriting(`/writings/${slug}`)}
-      className="lg:grid lg:grid-cols-5 font-medium mb-8 p-4 border-b-2 cursor-pointer"
+      onClick={() => routeToWriting(`/blog/${slug}`)}
+      className="lg:grid lg:grid-cols-5 font-medium mb-8 p-6 border-b-2 dark:border-darkShadow cursor-pointer"
     >
       <div className="flex lg:justify-between items-start col-span-2 cursor-pointer">
         <div className="avatar">
@@ -59,8 +59,8 @@ export const WritingRow = ({
       </div>
       <div className="xs:hidden lg:flex justify-end">
         <Link
-          href={`/writings/${slug}`}
-          className="btn btn-outline text-black btn-xs border "
+          href={`/blog/${slug}`}
+          className="btn btn-outline dark:bg-darkShadow hover:text-white btn-xs px-4 border-none "
         >
           Read
         </Link>

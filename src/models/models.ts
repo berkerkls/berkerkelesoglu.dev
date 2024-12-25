@@ -1,26 +1,25 @@
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 export interface LinkType {
   href: string;
   label: string;
-  icon: IconDefinition;
 }
 
 export interface MenuItemType {
-  href: string,
-  label: string,
-  icon: IconProp
+  href: string;
+  label: string;
+  icon?: IconProp;
 }
 
 export interface Theme {
-  theme: string
+  theme: string;
 }
 
 export interface JourneyItemType {
-  title: string,
-  company: string | null,
-  university: string | null,
-  startDate: string,
-  endDate: string | null,
-  description: string
+  title: string;
+  company: string | null;
+  university: string | null;
+  startDate: string;
+  endDate: string | null;
+  description?: string;
 }

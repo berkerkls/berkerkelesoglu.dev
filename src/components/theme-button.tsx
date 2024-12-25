@@ -1,7 +1,7 @@
-'use client';
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+"use client";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export const ThemeButton = () => {
   const { resolvedTheme, setTheme } = useTheme();
@@ -22,17 +22,17 @@ export const ThemeButton = () => {
       exit={{ opacity: 0, y: 15 }}
       transition={{ delay: 0.2 }}
     >
-      <label className="swap swap-rotate mt-4 mr-4">
+      <label className="swap swap-rotate h-36 px-4">
         {/* this hidden checkbox controls the state */}
         <input
           type="checkbox"
           className="theme-controller"
-          onChange={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+          onChange={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
           value={resolvedTheme}
           checked={
-            resolvedTheme == 'light'
+            resolvedTheme == "light"
               ? false
-              : resolvedTheme == 'dark'
+              : resolvedTheme == "dark"
               ? true
               : false
           }
