@@ -123,12 +123,20 @@ export const TopTools = () => {
         </div>
         <div className="relative lg:hidden md:flex sm:flex xs:flex justify-around h-full">
           <DropdownNavbar />
-          <div
-            onClick={() => router.push("/")}
-            className="absolute -top-6 left-5 w-52 transition-colors mt-4 cursor-pointer"
-          >
-            <div className="lg:hidden">
-              <span className="text-md font-medium">Berker Keleşoğlu</span>
+          <div className="absolute -top-8 left-4 w-52 transition-colors mt-4 cursor-pointer">
+            <div className="lg:hidden flex justify-start items-center gap-2">
+              <button
+                onClick={handleCopyClick}
+                className="px-3 py-2 dark:bg-darkShadow bg-lightSecondary rounded-lg hover:opacity-75 text-md"
+              >
+                email
+              </button>
+              <button
+                onClick={handleDownloadResume}
+                className="px-3 py-2 dark:bg-darkShadow bg-lightSecondary rounded-lg hover:opacity-75 text-md"
+              >
+                cv
+              </button>
             </div>
           </div>
           <div
