@@ -42,7 +42,7 @@ export default function Home() {
           <div className="text-center">
             <p className="text-darkSecondary p-2">
               Hey 👋, I am Berker, software developer and musician currently
-              based in Poland.
+              based in Turkey.
             </p>
           </div>
           <div className="lg:text-6xl md:text-2xl sm:text-2xl xs:text-2xl font-extrabold transition-colors bg-gradient-to-bl from-darkSecondary to-[#dcdcdc] bg-clip-text text-transparent text-center">

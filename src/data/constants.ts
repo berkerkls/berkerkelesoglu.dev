@@ -52,15 +52,15 @@ export const Navigations: Array<LinkType> = [
 ];
 
 export const Journey: Array<JourneyItemType> = [
-  {
-    title: "Started Master's Degree in Poland 🎓",
-    university: "WSB University",
-    company: null,
-    startDate: "September 2024",
-    endDate: "June 2026",
-    description:
-      "Started to study master's degree in the field of Computer Science Artificial Intelligence Applications.",
-  },
+  // {
+  //   title: "Started Master's Degree in Poland 🎓",
+  //   university: "WSB University",
+  //   company: null,
+  //   startDate: "September 2024",
+  //   endDate: "June 2026",
+  //   description:
+  //     "Started to study master's degree in the field of Computer Science Artificial Intelligence Applications.",
+  // },
   {
     title: "Frontend Developer 💻",
     university: null,
