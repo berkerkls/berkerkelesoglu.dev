@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+  "node": "22.x"
+},
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.19.0",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
