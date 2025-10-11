@@ -2,8 +2,7 @@
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-import Image from "next/image";
-import ProfileImage from "../../public/assets/berker.jpg";
+
 
 export default function Home() {
   const handleForwardEmail = () => {
@@ -23,26 +22,10 @@ export default function Home() {
         className="flex justify-center items-center"
       >
         <div className="flex flex-col justify-start items-center gap-4 w-2/4 h-full">
-          <div className="flex justify-center items-center">
-            <div className="avatar rounded-full border-0 dark:border-white border-black">
-              <div
-                className="rounded-full"
-                style={{ position: "relative", width: 150, height: 150 }}
-              >
-                <Image
-                  src={ProfileImage}
-                  alt="Berker Kelesoglu"
-                  layout="fill"
-                  objectFit="covers"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
           <div className="text-center">
             <p className="text-darkSecondary p-2">
-              Hey 👋, I am Berker, software developer and musician currently
-              based in Turkey.
+              Hey 👋, I am Berker, software engineer currently
+              based in Türkiye.
             </p>
           </div>
           <div className="lg:text-6xl md:text-2xl sm:text-2xl xs:text-2xl font-extrabold transition-colors bg-gradient-to-bl from-darkSecondary to-[#dcdcdc] bg-clip-text text-transparent text-center">

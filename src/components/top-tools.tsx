@@ -14,6 +14,8 @@ import { faCopy } from "@fortawesome/free-solid-svg-icons";
 import { DropdownNavbar } from "@/components/dropdown-navbar";
 import { Links } from "@/data/constants";
 import { useState } from "react";
+import Image from "next/image";
+import ProfileImage from "../../public/assets/berker.jpg";
 
 export default function Toast({
   message,
@@ -52,12 +54,12 @@ export const TopTools = () => {
     return twMerge(...args);
   };
   const [isCopied, setIsCopied] = useState(false);
-  const handleDownloadResume = () => {
-    const link = document.createElement("a");
-    link.target = "_blank";
-    link.href = "https://read.cv/berkerkelesoglu";
-    link.click();
-  };
+  // const handleDownloadResume = () => {
+  //   const link = document.createElement("a");
+  //   link.target = "_blank";
+  //   link.href = "https://read.cv/berkerkelesoglu";
+  //   link.click();
+  // };
 
   const handleCopyClick = () => {
     navigator.clipboard
@@ -87,7 +89,20 @@ export const TopTools = () => {
       >
         <div className="lg:flex md:hidden sm:hidden xs:hidden justify-around h-full">
           <div className="flex gap-8 justify-between items-center">
-            <div className="flex justify-between gap-4">
+            <div className="flex justify-between items-center gap-4">
+            <div
+                className="rounded-full border-0 dark:border-white border-black"
+                style={{ position: "relative", width: 35, height: 35 }}
+              >
+                <Image
+                  src={ProfileImage}
+                  alt="Berker Kelesoglu"
+                  layout="fill"
+                  objectFit="covers"
+                  className="rounded-full"
+                  priority
+                />
+              </div>
               <div className="flex">
                 <p className="text-darkSecondary">berkerkelesoglu@gmail.com</p>
               </div>
@@ -99,14 +114,14 @@ export const TopTools = () => {
                 />
               </div>
             </div>
-            <div>
+            {/* <div>
               <button
                 onClick={handleDownloadResume}
                 className="px-3 py-2 dark:bg-darkShadow bg-lightSecondary rounded-lg hover:opacity-75 text-md"
               >
                 cv
               </button>
-            </div>
+            </div> */}
           </div>
           <div className="flex justify-between items-center h-16 px-4 rounded-full dark:bg-darkShadow bg-lightSecondary">
             {Navigations &&
@@ -131,12 +146,12 @@ export const TopTools = () => {
               >
                 email
               </button>
-              <button
+              {/* <button
                 onClick={handleDownloadResume}
                 className="px-3 py-2 dark:bg-darkShadow bg-lightSecondary rounded-lg hover:opacity-75 text-md"
               >
                 cv
-              </button>
+              </button> */}
             </div>
           </div>
           <div
