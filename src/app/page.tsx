@@ -28,9 +28,9 @@ export default function Home() {
               based in Türkiye.
             </p>
           </div>
-          <div className="lg:text-6xl md:text-2xl sm:text-2xl xs:text-2xl font-extrabold transition-colors bg-gradient-to-bl from-darkSecondary to-[#dcdcdc] bg-clip-text text-transparent text-center">
+          {/* <div className="lg:text-6xl md:text-2xl sm:text-2xl xs:text-2xl font-extrabold transition-colors bg-gradient-to-bl from-darkSecondary to-[#dcdcdc] bg-clip-text text-transparent text-center">
             <h1>Building mobile and web application to solve user problems.</h1>
-          </div>
+          </div> */}
           <div className="flex justify-center items-center">
             <button
               onClick={handleForwardEmail}
